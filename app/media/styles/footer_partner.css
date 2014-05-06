@@ -1,0 +1,12 @@
+/* Footer immer */
+.foottext1  {clear:all; font:normal 0.6em verdana,   arial,   sans-serif; float:left;}
+
+
+div.footer {
+    
+}
+
+div.footer div a {height:82px; display:block; float:left;}
+div.footer div a span  {display:none;}
+
+div.footer div.bpartner a {margin-left:0px; background:url(../pix_change/logo_partner.png) no-repeat 0 0px; width:420px; height:82px;}

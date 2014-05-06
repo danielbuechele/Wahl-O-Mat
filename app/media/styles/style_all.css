@@ -1,0 +1,473 @@
+@font-face{
+    font-family:    "Roboto"; 
+    font-style:     "normal"; 
+    font-weight:    normal; 
+    src: url("../font/Roboto-Light-webfont.eot");
+    src:    
+        url("../font/Roboto-Light-webfont.eot?#iefix") format("embedded-opentype"), 
+        url("../font/Roboto-Light-webfont.woff") format("woff"), 
+        url("../font/Roboto-Light.ttf") format("truetype");
+}
+
+@font-face{
+    font-family:    "Roboto"; 
+    font-style:     "normal"; 
+    font-weight:    bold; 
+    src: url("../font/Roboto-Bold-webfont.eot");
+    src:
+        url("../font/Roboto-Bold-webfont.eot?#iefix") format("embedded-opentype"), 
+        url("../font/Roboto-Bold-webfont.woff") format("woff"), 
+        url("../font/Roboto-Bold.ttf") format("truetype");
+}
+
+
+/*global*/
+*{border:none; margin:0; padding:0;}
+body{background:#fff url(../pix/europa_bg.png) repeat-x 0 0; min-height:101%; overflow-y:scroll;}
+strong{font-family:'Roboto',arial,sans-serif; font-weight:bold;}
+b{font-family:'Roboto',arial,sans-serif; font-weight:bold;}
+
+.wrapper{margin: 0 auto;  width: 800px; font-family: 'Roboto',arial, sans-serif; margin-top:60px;}
+.wrapper.pop_up{width:640px;}
+
+h1{font-size:30px; font-weight:normal; margin-bottom:10px;}
+h2{font-size:16px; color:#ff6600; line-height:24px;}
+h4.result {font-size:18px;}
+a{text-decoration:none; color:#000;}
+a.more_info{font-size:16px; color:#ff6600; padding-right:20px; background:url(../pix/icon/link_pfeil.png) no-repeat 152px 8px;}
+a.more_info:hover{text-decoration:underline; background:url(../pix/icon/link_pfeil_over.png) no-repeat 150px 5px;}
+ul{list-style:none;}
+p {font-size:18px; line-height:24px; margin-bottom:45px;}
+p.small_p{font-size:16px; padding-bottom:20px;}
+.clear{clear:both; font-size:0px;}
+.box_pfeil{top:-26px; display:block; position:absolute; height:26px; width:26px; background:url(../pix/icon/pfeil_parteien.png) no-repeat 0 0;}
+/*Header*/
+.logo{position:relative;}
+.logo a{vertical-align:top;}
+.logo .bjr{position:absolute; right:195px;}
+.logo .blz{position:absolute; right:0px;}
+/*Content*/
+.content{margin:55px 0 80px 0;}
+.main_content{float:right; width:560px;}
+
+/*intro*/
+.start{background:#fff url(../pix/bg.png) repeat-x 0 0;}
+.start .wrapper{width:350px; margin-top:100px;}
+.start h2{font-size:18px; font-weight:normal; background:url(../pix/wom.png) no-repeat 0 40px; color:#000; height:80px; margin-bottom:160px;}
+.start h2 span{display:none;}
+.start a{text-align:right; font-size:24px; background:url(../pix/icon/weiter_start.png) no-repeat 100% 0; line-height:42px; padding-right:60px; display:block; line-height:46px; margin-bottom:40px;}
+.start a:hover, .start a:focus{background:url(../pix/icon/weiter_start_over.png) no-repeat 100% 0;}
+.start a:hover span, .start a:focus span{text-decoration:underline;}
+
+.navi{width:240px; float:left; margin-top:50px;}
+.navi li a{font-size:14px; line-height:40px; color:#000; padding-left:40px; display:block; }
+.navi li a:hover{text-decoration:underline;}
+.main_navi {margin-bottom:85px; width:200px;}
+.main_navi li.kandidaten {background:url(../pix/icon/icon_menue_wszw.png) no-repeat 8px 10px;}
+.main_navi li.kandidaten:hover{background:url(../pix/icon/icon_menue_wszw_over.png) no-repeat 7px 9px;}
+.main_navi li.fakten {background:url(../pix/icon/icon_menue_info.png) no-repeat 8px 10px;}
+.main_navi li.fakten:hover{background:url(../pix/icon/icon_menue_info_over.png) no-repeat 7px 9px;}
+.main_navi li.material {background:url(../pix/icon/icon_menue_unterricht.png) no-repeat 8px 10px;}
+.main_navi li.material:hover{background:url(../pix/icon/icon_menue_unterricht_over.png) no-repeat 7px 9px;}
+.main_navi li.faq{background:url(../pix/icon/icon_menue_faq.png) no-repeat 8px 10px;}
+.main_navi li.faq:hover{background:url(../pix/icon/icon_menue_faq_over.png) no-repeat 7px 9px;}
+.main_navi li.presse{background:url(../pix/icon/icon_menue_presse.png) no-repeat 8px 8px;}
+.main_navi li.presse:hover{background:url(../pix/icon/icon_menue_presse_over.png) no-repeat 7px 7px;}
+.main_navi li.impressum{background:url(../pix/icon/icon_menue_impressum.png) no-repeat 8px 12px;}
+.main_navi li.impressum:hover{background:url(../pix/icon/icon_menue_impressum_over.png) no-repeat 7px 11px;}
+
+.content_box{padding:10px 40px 0 40px;}
+.content_box h2{margin-bottom:25px;}
+.content_box p{font-size:16px; margin-bottom:30px;}
+.content_box .impressum_text{font-weight:bold;}
+.content_box .impressum_text span{color:#ff6600;}
+.content_box a{color:#ff6600;}
+.content_box .text_big{font-size:18px;}
+.faq_list{margin-bottom:50px;}
+.faq_list .trigger_active{font-weight:bold;}
+.faq_list li{margin-bottom:25px; background:url(../pix/icon/link_pfeil.png) no-repeat 0 6px; padding-left:15px;}
+.faq_list li .trigger {color:#ff6600; cursor:pointer;}
+.faq_list li .statistic_counter{font-weight:bold; }
+.faq_list li p{margin-top:20px;}
+.faq_list li .trigger:hover{text-decoration:underline;}
+
+.wahlomat_startseite{position:relative; height:540px; background:url(../pix/icon/kasten_start.png) no-repeat 0 0;}
+.welcome{padding:195px 60px 0 60px; font-size:18px; line-height:24px;}
+.welcome h1{font-size:18px; line-height:24px; margin-bottom:25px;}
+.welcome p{margin-bottom: 25px;}
+.welcome span{font-weight:bold;}
+.welcome a{padding:15px 65px 15px 0; font-size:25px; position:absolute; right:60px; bottom: 56px; color:#fff; background:url(../pix/icon/start.png) no-repeat 70px 4px; }
+.welcome a:hover {text-decoration:underline; background:url(../pix/icon/start_over.png) no-repeat 68px 2px;}
+
+.wahlomat{ height:540px; float:right; background:url(../pix/icon/kasten.png) no-repeat 0 0; position:relative;}
+.thesen{padding:0 16px 0 20px; width:404px; height:240px; margin: 196px 60px 0 60px; position:relative;}
+.thesen h1{font-size: 16px; color:#ff6600; padding:20px 0 0 2px; margin:0px; font-weight:bold;}
+.thesen p{font-size: 18px; line-height:26px; color:#000; padding:8px 24px 0px 2px; margin:0;  }
+.thesen .skipper{font-size: 13px;  color:#666; position:absolute; right:25px; bottom:64px;  }
+.thesen .bogus{font-size:13px; color:#ff6600; position:absolute; left:20px; bottom:64px;}
+.thesen .skipper:hover{ color:#ff6600;}
+.thesen .skipping{color:#ff6600;}
+.thesenanzahl{font-weight:normal;}
+.points {width:420px; margin:38px 0 0 60px; padding: 0 14px;}
+.points li{float:left; padding-right:3px; position:relative;}
+.points li a{display:block; width:8px; height:8px; }
+.points li.previous_point a {background:url(../pix/icon/dot_braun_6px.png) no-repeat 1px 1px; }
+.points li.previous_point a:hover {background:url(../pix/icon/dot_black_8px.png) no-repeat 0px 0px;  }
+.points li.active_point a {background:url(../pix/icon/dot_black_8px.png) no-repeat 0px 0px; }
+.points li span{background:url(../pix/icon/dot_white_6px.png) no-repeat 1px 1px; display:block; width:8px; height:8px; }
+.points li .arrow_left{background:url(../pix/icon/pfeil_links.png) no-repeat 0 0; display:block; width:33px; left:5px; height:33px; position:absolute; bottom:14px; }
+.points li .arrow_right{background:url(../pix/icon/pfeil_rechts.png) no-repeat 0 0; display:block; width:33px; right:10px; height:33px; position:absolute; bottom:14px; }
+
+
+.entscheidung{font-size: 0px; width:400px; height:34px; position:absolute; bottom:22px;}
+.entscheidung li{float:left; text-align:center;}
+.entscheidung li a:focus{background:#eb5e00;}
+.entscheidung li.yes{width: 126px; border-right:1px solid #fff;}
+.entscheidung li.neutral{width:108px; border-right:1px solid #fff;}
+.entscheidung li.no{width:163px;}
+.entscheidung a{position:static; background:#000; padding:8px 25px;  font-size:14px; color:#fff;  font-weight:bold; display:block;}
+.entscheidung a:hover{background:#eb5e00; text-decoration:none; color:#fff;}
+.entscheidung a.decision{background:#eb5e00; color:#fff;}
+
+.breadcrumb{border-bottom:1px solid #000; padding-bottom:5px; width:560px; position:relative; margin-bottom:30px;}
+.breadcrumb a{font-size:14px;  background:url(../pix/icon/breadcrumb_black_zurueck.png) no-repeat 0 5px; padding-left:10px; float:left;}
+.breadcrumb a:hover{text-decoration:underline;}
+.breadcrumb_list{float:right;}
+.breadcrumb_list li{ color:#6e6e6e; background:url(../pix/icon/breadcrumb_grey_inactive.png) no-repeat 8px 6px; float:left; font-size:14px; padding-left:20px; }
+.breadcrumb_list li.active{background:url(../pix/icon/breadcrumb_black_weiter.png) no-repeat 8px 6px; color:#000; }
+.breadcrumb_list li.first_position{padding-left:0; background:none;}
+.breadcrumb_list li.active a{color:#000;}
+.breadcrumb_list li a{background:none; padding:0; float:none;  font-size:inherit;}
+.breadcrumb_list li a:hover{text-decoration:underline;}
+
+
+.auswertung li{padding-bottom:15px; padding-right:40px; position:relative; overflow:hidden;}
+.auswertung input[type=checkbox]{position:absolute; right:10px; top:10px;}
+.auswertung li p{font-size:16px; line-height:22px; padding:10px 0 10px 20px; margin:0;}
+.auswertung span.point_star{background:url(../pix/icon/dot_black_8px.png) no-repeat 20px 0px; position:absolute; width:auto; right:-40px; bottom:-8px; padding:0 20px;  }
+.auswertung label{ width: 550px; position:relative; cursor:pointer; background:url(../pix/icon/thesen_hinterlegung_aktiv.png) no-repeat -520px 0px; transition:background-position 500ms; -o-transition:background-position 500ms; -ms-transition:background-position 500ms; -moz-transition:background-position 500ms; -webkit-transition:background-position 500ms; padding:5px 0 1px 10px; font-size:16px; height:32px; display:block; color:#000; font-weight:bold; }
+.label_check span.star{ width:16px; height:16px; position:absolute; right:10px; bottom:12px; text-indent:-9999em; }
+.label_check span.number{width:15px;}
+.label_check:hover .label_check span{background:url(../pix/icon/star_yellow_17px.png) no-repeat 0 0;}
+.auswertung .trigger{background:url(../pix/icon/thesen_hinterlegung.png) no-repeat 0px 0px; }
+.auswertung label span.stern {background:url(../pix/icon/stern.png) no-repeat 0 0; position:relative; display:inline-block; width:8px;}
+.label_over:hover {background-position:0px 0; color:#fff;}
+.label_over:hover span.stern {background:url(../pix/icon/stern_weiss.png) no-repeat 0 0;} 
+
+.trigger_active label{ color:#fff; background:url(../pix/icon/thesen_hinterlegung_aktiv.png) no-repeat 0px 0px;}
+.trigger_active label span.stern {background:url(../pix/icon/stern_weiss.png) no-repeat 0 0;}
+.trigger_active span.star{background:url(../pix/icon/star_yellow_17px.png) no-repeat 0px 0px ! important;}
+.trigger_active .ergebnis_prozent{color:#000;}
+
+.parteien p{margin-bottom:15px;}
+.parteien_list{padding:0; margin-bottom:6px; height:auto; position:relative;}
+.parteien_list label{display: block; cursor:pointer; height: 95px; padding: 4px 4px 0; width: 90px; border:1px solid transparent;}
+.parteien_list label.on{border:1px solid #ffaa00;}
+.grayfilter{z-index:-1;  filter:url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); -webkit-filter:grayscale(100%); -ms-filter:grayscale(100%);}
+.grayfilter_over:hover, .parteien_list label.on img{filter:url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale"); -webkit-filter:grayscale(0%); -ms-filter:grayscale(0%);}
+
+
+.parteien_list input{position:absolute; left:42px; }
+.parteien_list li{background:url(../pix/icon/parteien_bg.png) no-repeat 5px 5px;  padding-bottom:24px;}
+.parteien_list li.partei_01 div .box_pfeil{top:-26px; left:20px; }
+.parteien_list li.partei_02 div .box_pfeil{top:-26px; left:135px; }
+.parteien_list li.partei_03 div .box_pfeil{top:-26px; left:250px; }
+.parteien_list li.partei_04 div .box_pfeil{top:-26px; left:365px; }
+.parteien_list li.partei_05 div .box_pfeil{top:-26px; left:480px; }
+.parteien_list li div{width:513px; height:148px; padding:20px; margin-top:35px; border:1px solid #000; /*background-color:#fff;*/ position:relative;}
+.parteien_list li p{font-size:16px; margin:0px;}
+.parteien_list li a{width:90px; height:90px; }
+.parteien_list li div h2 {margin-bottom:3px;}
+
+.programm_list{clear:both; display:none;}
+.programm_list li{overflow:hidden; height:auto;}
+.partei_box{padding:20px; border:1px solid #000;}
+.partei_box p{margin:0;}
+.partei_box .more_info{display:inline;}
+
+.link_zu_kommentare{text-align:right; margin-bottom:40px;}
+.link_zu_kommentare .links {float:left; width:255px; margin-right:30px;}
+.link_zu_kommentare .rechts {float:left; width:275px;}
+.link_zu_kommentare a{color:#ff6600; float:right; padding-right:50px; background:url(../pix/icon/zum_teaser.png) no-repeat right 4px; margin-bottom:18px;}
+.link_zu_kommentare a:hover{text-decoration:underline; background:url(../pix/icon/zum_teaser_over.png) no-repeat right 2px;}
+.link_zu_kommentare a span{display:block; margin-right:5px; font-size:20px; text-align:right;}
+.link_zu_kommentare span{display:block; float:left; font-size:14px; text-align:left;}
+
+.ergebnis_list div{overflow:hidden; position:relative;}
+.ergebnis_list span.ergebnis_balken{height:28px; padding:4px 0 0 12px; display:block; position:relative; font-weight:bold; font-size:16px; background:url(../pix/icon/hinterlegung_uebereinstimmung.png) no-repeat 0 0; cursor:pointer; }
+.ergebnis_list span.ergebnis_balken:hover{background:url(../pix/icon/hinterlegung_uebereinstimmung_aktiv.png) no-repeat 0 0;}
+.ergebnis_list span.ergebnis_balken.on_modus{background:url(../pix/icon/hinterlegung_uebereinstimmung_aktiv.png) no-repeat 0 0;}
+.ergebnis_list li{padding-bottom:20px; overflow:hidden; position:relative;}
+.ergebnis_list p{line-height:22px; font-size:16px; margin:0 0 0 110px;}
+.ergebnis_list .info_box{ overflow:visible; height:auto; padding:20px; border:1px solid #000; position:relative; margin-top:22px; margin-bottom:16px;}
+.ergebnis_list .info_box h2 {margin-bottom:3px;}
+.ergebnis_list img{background:url(../pix/icon/parteien_bg.png) no-repeat 0 0; float:left; margin-right:20px;}
+.ergebnis_list .ergebnis_partei{width:auto; display:block; height:28px; position:absolute; z-index:1;}
+.ergebnis_list .ergebnis_prozent{ text-align:right; background:url(../pix/icon/hinterlegung_uebereinstimmung_prozente.png) no-repeat 560px 0; height:auto; width:auto; bottom:0px; height:27px; padding:5px 12px 0 0; right:0px; width:548px;  display:inline;  position:absolute;}
+.transition{transition:background-position 1s; -o-transition:background-position 1s; -ms-transition:background-position 1s; -moz-transition:background-position 1s; -webkit-transition:background-position 1s;}
+
+span.close{cursor: pointer; background:url(../pix/icon/schliessen.png) no-repeat 2px 2px; height:17px; width:17px; padding:0px; margin:0; top:14px; right:14px; position:absolute; }
+span.close:hover{background:url(../pix/icon/schliessen_over.png) no-repeat 0px 0px;}
+span.close_two{cursor: pointer; background:url(../pix/icon/schliessen.png) no-repeat 2px 2px; height:17px; width:17px; padding:0px; margin:0; top:14px; right:14px; position:absolute; }
+span.close_two:hover{background:url(../pix/icon/schliessen_over.png) no-repeat 0px 0px;}
+span.close_info{cursor: pointer; background:url(../pix/icon/schliessen.png) no-repeat 0 0px; height:17px; width:17px; padding:0px; margin:0; top:14px; right:14px; position:absolute; }
+span.close_info:hover{background:url(../pix/icon/schliessen_over.png) no-repeat 0 0px;}
+
+.slider_border{border:1px solid #000; height:178px; width:558px;}
+.thesen_slider{overflow:hidden; position:relative; width:560px;}
+.thesen_box{width:99999px; left:0; position:absolute;}
+.thesen_box li{padding:20px; position:relative; float:left; margin-bottom: 36px; width:518px;}
+.thesen_box p{line-height:22px; margin-bottom:25px; font-size:16px;}
+.thesen_box h2{position:relative; margin-bottom:3px;}
+.thesen_box h2 .counter{font-weight:normal; border:none; font-size:16px;}
+.thesen_box a{ font-size:16px; color:#ff6600;}
+.thesen_box a:hover {text-decoration:underline;}
+.thesen_box .hide_link{display:none;}
+.thesen_box .these_previous{float:left; background:url(../pix/icon/link_pfeil_links.png) no-repeat 2px 8px; padding-left:15px;  }
+.thesen_box .these_previous:hover{background:url(../pix/icon/link_pfeil_over_links.png) no-repeat 0px 6px;}
+.thesen_box .these_next{float:right; background:url(../pix/icon/link_pfeil.png) no-repeat 110px 8px; padding-right:15px; }
+.thesen_box .these_next:hover{background:url(../pix/icon/link_pfeil_over.png) no-repeat 108px 6px;}
+.thesen_box .info_link span{visibility:hidden;  }
+.thesen_box .info_link {  margin-left:3px; background:url(../pix/icon/info.png) 5px 3px no-repeat;}
+.thesen_box .info_link:hover{background:url(../pix/icon/info_over.png) 4px 2px no-repeat; text-decoration:none;} 
+.thesen_points{padding:0 0 0 35px; float:left; margin-bottom:50px; margin-top:35px;}
+.thesen_points li{ float:left; position:relative; }
+.thesen_points li a{display:block; background:url(../pix/icon/dot_black_6px.png) no-repeat 3px 3px; height:13px; width:13px;}
+.thesen_points li.active a,.thesen_points li a:hover{background:url(../pix/icon/dot_black_8px.png) no-repeat 2px 2px;}
+.thesen_points li a.star_orange{ padding:0; background:url(../pix/icon/star_yellow_13px.png) no-repeat 0px 0px;}
+.thesen_points li.active a.star_orange,.thesen_points li a.star_orange:hover{background:url(../pix/icon/star_yellow_15px.png) no-repeat -1px -1px;}
+.thesen_points li.active .arrow_kommentar{position:absolute; left:7px; bottom:23px; display:block; height:26px; width:26px; background:url(../pix/icon/pfeil_kommentare_links.png) no-repeat 0px 0px} 
+.thesen_back{display: none; position:absolute; cursor:pointer; bottom:205px; left:20px; height:51px; width:19px; background:url(../pix/icon/these_zurueck.png) no-repeat 0 0;}
+.thesen_next{display:none; position:absolute; cursor:pointer; bottom:205px; right:20px; height:51px; width:19px; background:url(../pix/icon/these_vor.png) no-repeat 0 0;}
+.thesen_back span{visibility:hidden;} 
+.thesen_next span{visibility:hidden;}
+
+.parteiantworten {position:relative;}
+.antworten_box{position:relative; width:560px; overflow:hidden; margin-bottom:20px;}
+.antworten_box p{font-size:16px; width:458px; margin:0; padding:15px 0 5px 52px; background:url(../pix/icon/kommentar.png) no-repeat 12px 20px; }
+.my_votum li{background:url(../pix/icon/balken_default.png) no-repeat 0 0; width:510px; height:30px; }
+.my_votum .my_balken{font-weight:normal; margin-left:12px; background:url(../pix/icon/user.png) no-repeat 95px 8px; padding:5px 0 0 0px; display:block; }
+.parteien_votum{margin:20px 0; position:relative; overflow:hidden; }
+.votum_list{width:99999px;  position:relative; left:0; overflow:hidden;}
+.votum_list li{width:560px; position:relative; float:left;}
+.votum_list li p span{display:block; font-weight:bold; }
+
+.antworten_box ul li{overflow:hidden; display:none; transition:all 0.3s; -webkit-transition:all 0.3s; -moz-transition:all 0.3s; -ms-transition:all 0.3s;}
+.antworten_box ul li.on{display:block;}
+
+.antworten_box ul.on li.on div{display:block;}
+.antworten_box ul li .partei_balken{color:#000; background:url(../pix/icon/balken_default.png) no-repeat 0 0; cursor:pointer; font-weight:bold; width:505px; padding:5px 0 0 12px; height:30px; display:block;}
+.antworten_box ul.on li .partei_balken, .antworten_box .partei_balken:hover{color:#fff; background:url(../pix/icon/hinterlegung_kommentare_aktiv.png) no-repeat 0 0;}
+
+.antworten_partei{position:absolute; right:0; top:0; display:block; height:32px; width:32px;}
+.approved{ background:url(../pix/icon/votum_pro.png) no-repeat 0 0; }
+.negative{ background:url(../pix/icon/votum_con.png) no-repeat 0 0;}
+.neutral{ background:url(../pix/icon/votum_neutral.png) no-repeat 0 0;}
+.avoid{ background:url(../pix/icon/votum_enthalten.png) no-repeat 0 0;}
+
+.statistics{ position:relative; background:url(../pix/icon/linie.png) no-repeat 0 25px,url(../pix/icon/linie.png) no-repeat 0px 175px; border-bottom:1px solid #000; }
+.visitors{width:80px; float:left; margin-top:28px; }
+.visitors div{text-align:right; font-size:16px; color:#6e6e6e; padding-bottom:130px;}
+.statbars{ width:448px; position:absolute; left:97px; bottom:0px;  }
+.statbars div{height:330px; position:relative; float:left; width:14px;}
+.statbars div div{height:330px; position:absolute; bottom:0; right:0; width:8px; display:block;}
+.statbars div.bar_a div{background:#ffbb00;}
+.statbars div.bar_b div{background:#fe9709;}
+.weeks{margin:12px 0 0 90px;}
+.weeks li{float:left; margin:0; width:103px; color:#6e6e6e; font-size:16px; background:none; padding:0;}
+
+.skip{border-top:1px solid #000; padding-top:15px; position:relative; margin-top:25px;}
+.skip .previous{padding:6px 0 0 43px; display:block; height:35px;  position:absolute; background:url(../pix/icon/arrow_back.png) no-repeat 2% 2px;}
+.skip .next{padding:6px 42px 0 0; right:0px; font-size:16px; position:absolute; display:block; height:37px; background:url(../pix/icon/arrow_next.png) no-repeat 98% 2px;}
+.skip .next:hover{background:url(../pix/icon/weiter_over.png) no-repeat 100% 0px;}
+.skip .previous:hover{background:url(../pix/icon/zurueck_over.png) no-repeat 0px 0px;}
+.skip .neustart{padding:6px 0 0 43px; display:block; height:35px;  top:63px; position:absolute; background:url(../pix/icon/neustart.png) no-repeat 2% 2px;}
+.skip .neustart:hover{background:url(../pix/icon/neustart_over.png) no-repeat 0px 0px;}
+
+
+.skip input.next{padding:0px 42px 5px 0; cursor:pointer; height:37px; font-family: 'Roboto',arial, sans-serif;}
+.skip input.next:hover{text-decoration:underline;}
+.skip a:hover{text-decoration:underline;}
+
+.counter{ color:#ff6600; font-size:22px;}
+.counter span{color:#000; font-size:18px;}
+
+.orange_star{color:#ff6600;}
+
+.einrueckung span {background:url(../pix/icon/stern.png) no-repeat 0 0; min-height:70px; float:left; width:12px;}
+
+/*Footer*/
+.footer{clear:both;}
+
+/*IE6-Hack*/
+* html .auswertung label{width:auto;}
+* html .weeks{margin-left:40px;}
+* html .skip input.next {padding-right:30px;}
+* html .parteiantworten{margin-top:50px;}
+* html .points li .arrow_left{bottom:32px;}
+* html .points li .arrow_right{bottom:32px;}
+* html .thesen a{background-position:135px 4px;}
+* html .thesen a:hover{background-position:135px 2px;}
+* html .thesen_box .these_next{background-position:106px 8px;}
+* html .my_votum .my_balken{background-position:95px 6px;}
+* html .breadcrumb_list li{background-position:8px 4px;}
+* html .thesen_points li a.active_dot .arrow_kommentar{background-position:0px 1px;}
+* html .thesen_points li a.active_star .arrow_kommentar{background-position:0px 1px;}
+* html a.more_info{background:none;} 
+* html a.more_info:hover{background:none;} 
+* html .thesen_box .info_link:hover{background-position: 4px 1px;} 
+* html .box_pfeil{right:515px;}
+* html .ergebnis_list .info_box{ position:static;}
+* html .navi li a{line-height:15px;}
+* html .navi li.kandidaten {background-position: 2px 0px;}
+* html .navi li.fakten {background-position: 2px 0px;}
+* html .navi li.material {background-position: 2px 0px;}
+* html .navi li.faq {background-position: 2px 0px;}
+* html .navi li.presse {background-position: 2px -2px;}
+* html .navi li.impressum {background-position: 2px 2px;}
+* html .label_check span.star {bottom:7px; right:-20px;}
+* html .statbars{top:62px; left:17px;}
+* html .faq_list li{background-position:0px 10px;}
+* html .parteien_list li div{padding-bottom:16px;}
+* html .my_votum .my_balken{background-position:120px 9px; padding-top:2px;}
+* html .parteien_list input{position:static;} 
+/*IE7-Hack*/
+*+html .thesen_box .these_next{background-position:105px 6px;}
+*+html .parteiantworten{margin-top:50px;}
+*+html .my_votum .my_balken{background-position:95px 6px;}
+*+html .thesen_box .these_next{background-position:106px 8px;}
+*+html .skip input.next {padding-right:30px;}
+*+html a.more_info{background:none;}
+*+html a.more_info:hover{background:none;} 
+*+html .thesen_box .info_link:hover{background-position: 4px 1px;}
+*+html .box_pfeil{left:20px;}
+*+html .statbars{bottom:-30px;}
+*+html .faq_list li{background-position:0px 10px;}
+*+html .my_votum .my_balken{background-position:120px 9px; padding-top:2px;} 
+/*IE8-Hack*/
+a.more_info{background-position:148px 8px\9;} 
+a.more_info:hover{background-position:146px 5px\9;}
+.info_box a.more_info{background-position:152px 7px\9;} 
+.info_box a.more_info:hover{background-position:150px 5px\9;}
+.thesen_box .info_link:hover{background-position: 4px 2px\9;}
+.skip input.next{}
+
+/* 
+    GLAMUS Ergaenzungen
+*/
+
+.unsichtbar {display:none;}
+p.auswertung a { 
+    text-decoration: underline;
+}
+
+/* GLAMUS Umfrage */
+
+#umfrage {
+    float:left;
+    z-index:1000;
+    display:none;
+    background-color:#ffffff;
+    border: solid 1px #000;
+    margin:0px;
+    position:absolute;
+    top:22px; left:0px;
+    padding:0px;
+    width:558px;
+    height:270px;
+    font-family: 'Roboto',arial, sans-serif;
+}
+
+#umfrage div {
+    padding:30px;
+    margin:0px;
+}
+
+#umfrage div.close {
+    padding:0px;
+    float: right;
+    margin: 2px;
+    margin-right: 4px;
+    margin-top: 8px;
+    width: 18px;
+    height: 17px;
+    background:url(../pix_change/umfrage_close.png) no-repeat 0px;
+}
+    
+
+#umfrage div b {
+    font-size: 1.1em;
+    font-family: 'Roboto',arial, sans-serif;
+    text-decoration:none;
+    color: #ff6600;
+}
+#umfrage div p {
+    font-size: 1em;
+    font-family: 'Roboto',arial, sans-serif;
+    text-decoration:none;
+    color: #000;
+    margin:0px;
+}
+
+#umfrage div p a,
+#umfrage div p a:visited,
+#umfrage div p a:focus {
+    text-decoration:none;
+    color: #000000;
+}
+
+#umfrage div p a:hover{
+    color:#E79E00; 
+    text-decoration:none;
+    font-size: 1em;
+}
+
+#umfrage div a.umfragestart{font-size: 1.1em; padding:6px 42px 0 0; right:0px; font-size:16px; position:absolute; display:block; height:37px; background:url(../pix/icon/arrow_next.png) no-repeat 98% 2px; margin-right:20px;}
+#umfrage div a.umfragestart:visited{background:url(../pix/icon/weiter_over.png) no-repeat 100% 0px;}
+#umfrage div a.umfragestart:hover{background:url(../pix/icon/weiter_over.png) no-repeat 100% 0px;text-decoration:underline;}
+
+.wom-app {position:absolute; left:24px; top:220px; z-index:100;}
+
+ul.popup {
+    list-style-type:disc;
+    margin-top:5px;
+    
+}
+ul.popup li {
+    background-image:none;
+    margin-left:14px;
+    border-left:3px;
+    padding-left:3px
+    //xbackground-color: #ececec;
+    margin-bottom:10px;
+}
+
+
+/* 
+    Name Kuerzer wegen Dateigroese
+*/
+.points li.pp a:focus {background:url(../pix/icon/dot_black_8px.png) no-repeat 0px 0px;  }
+
+/*
+    Thesen-Info
+*/
+.skip .infonext{padding:6px 42px 0 0; right:0px; font-size:16px; position:absolute; display:block; height:35px;; background:url(../pix/icon/arrow_next.png) no-repeat 242px 2px;}
+.skip .infonext:hover{background:url(../pix/icon/weiter_over.png) no-repeat 240px 0px;}
+
+@-moz-document url-prefix(){.skip a.infonext{background-position:240px 2px; }}
+
+.skip a.infonext{color:#000000; padding:6px 42px 5px 0; cursor:pointer; height:37px; font-family: 'Roboto',arial, sans-serif;}
+.skip a.infonext:hover{text-decoration:underline;}
+@-moz-document url-prefix(){.skip a.infonext:hover{background-position:240px 0px; }}
+
+a.more_info_cc{font-size:16px; color:#ff6600; padding-right:20px; background:url(../pix/icon/link_pfeil.png) no-repeat 147px 8px;}
+a.more_info_cc:hover{text-decoration:underline; background:url(../pix/icon/link_pfeil_over.png) no-repeat 145px 5px;}
+.partei_box .more_info_cc{display:inline;}
+* html a.more_info_cc{background:none;} 
+* html a.more_info_cc:hover{background:none;} 
+*+html a.more_info_cc{background:none;}
+*+html a.more_info_cc:hover{background:none;} 
+a.more_info_cc{background-position:142px 8px\9;} 
+a.more_info_cc:hover{background-position:140px 5px\9;}
+.info_box a.more_info_cc{background-position:146px 7px\9;} 
+.info_box a.more_info_cc:hover{background-position:146px 5px\9;}

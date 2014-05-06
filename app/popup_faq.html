@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de" dir="ltr">
+<head>
+<title>Wahl-O-Mat</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <meta name="robots" content="noindex,nofollow" />
+    <script language="JavaScript" charset="ISO-8859-1" src="module_definition.js" type="text/javascript">
+    </script>
+    <script language="JavaScript" charset="ISO-8859-1" src="module_common.js" type="text/javascript">
+    </script>
+    <script language="JavaScript" charset="ISO-8859-1" src="module_common_partner.js" type="text/javascript">
+    </script>
+    <script language="JavaScript" charset="ISO-8859-1" src="media/js/jQuery_1_10_2.js" type="text/javascript">
+    </script>
+    <script language="JavaScript" charset="ISO-8859-1" src="media/js/wommain.js" type="text/javascript">
+    </script>
+    
+    <script language="javascript" type="text/javascript">
+        // <![CDATA[
+            S_nSprache = 0;
+           	document.writeln(print_meta());
+        //]]>
+    </script>
+
+</head>
+<body style="overflow-y:visible">
+<script language="javascript" type="text/javascript">
+// <![CDATA[
+    rw = '';
+    rw += '<div class="wrapper pop_up">';
+				rw += '<div class="content_box">';
+					rw += '<h1>' +wom_html(WOMT_aTexte["popup_faq_titel"][S_nSprache]) + '</h1>';
+					rw += '<p class="text_big">' +wom_html(WOMT_aTexte["popup_faq_text"][S_nSprache]) + '</p>';
+					rw += '<ul class="faq_list">';
+						rw += '<li><span class="trigger"><a tabindex="1" title="" class="link_list" href="#qe1">' +wom_html(WOMT_aTexte["popup_faq_1_frage"][S_nSprache]) + '</a></span><div><p id="qe1">' +wom_html(WOMT_aTexte["popup_faq_1_text"][S_nSprache]) + '</p></div></li>';
+						rw += '<li><span class="trigger"><a tabindex="2" title="" class="link_list" href="#qe2">' +wom_html(WOMT_aTexte["popup_faq_2_frage"][S_nSprache]) + '</a></span><div><p id="qe2">' +wom_html(WOMT_aTexte["popup_faq_2_text"][S_nSprache]) + '</p></div></li>';
+						rw += '<li><span class="trigger"><a tabindex="3" title="" class="link_list" href="#qe3">' +wom_html(WOMT_aTexte["popup_faq_3_frage"][S_nSprache]) + '</a></span><div><p id="qe3">' +wom_html(WOMT_aTexte["popup_faq_3_text"][S_nSprache]) + '</p></div></li>';
+						rw += '<li><span class="trigger"><a tabindex="4" title="" class="link_list" href="#qe4">' +wom_html(WOMT_aTexte["popup_faq_4_frage"][S_nSprache]) + '</a></span><div><p id="qe4">' +wom_html(WOMT_aTexte["popup_faq_4_text"][S_nSprache]) + '</p></div></li>';
+						rw += '<li><span class="trigger"><a tabindex="5" title="" class="link_list" href="#qe5">' +wom_html(WOMT_aTexte["popup_faq_5_frage"][S_nSprache]) + '</a></span><div><p id="qe5">' +wom_html(WOMT_aTexte["popup_faq_5_text"][S_nSprache]) + '</p></div></li>';
+						rw += '<li><span class="trigger"><a tabindex="6" title="" class="link_list" href="#qe6">' +wom_html(WOMT_aTexte["popup_faq_6_frage"][S_nSprache]) + '</a></span><div><p id="qe6">' +wom_html(WOMT_aTexte["popup_faq_6_text"][S_nSprache]) + '</p></div></li>';
+						rw += '<li><span class="trigger"><a tabindex="7" title="" class="link_list" href="#qe7">' +wom_html(WOMT_aTexte["popup_faq_7_frage"][S_nSprache]) + '</a></span><div><p id="qe7">' +wom_html(WOMT_aTexte["popup_faq_7_text"][S_nSprache]) + '</p></div></li>';
+						rw += '<li><span class="trigger"><a tabindex="8" title="" class="link_list" href="#qe8">' +wom_html(WOMT_aTexte["popup_faq_8_frage"][S_nSprache]) + '</a></span><div><p id="qe8">' +wom_html(WOMT_aTexte["popup_faq_8_text"][S_nSprache]) + '</p></div></li>';
+						rw += '<li><span class="trigger"><a tabindex="9" title="" class="link_list" href="#qe9">' +wom_html(WOMT_aTexte["popup_faq_9_frage"][S_nSprache]) + '</a></span><div><p id="qe9">' +wom_html(WOMT_aTexte["popup_faq_9_text"][S_nSprache]) + '</p>' +wom_html(WOMT_aTexte["popup_faq_9_text_liste"][S_nSprache]) + '</div></li>';
+					rw += '</ul>';
+				rw += '<div class="clear"></div>';
+			rw += '</div>';
+	rw += '</div>';
+	
+		document.writeln(rw);
+		
+		$(document).ready( function() {
+		    bindTriggers();
+		});
+//]]>
+</script>
+</body>
+</html>
